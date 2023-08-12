@@ -5,13 +5,13 @@ public class C206_CaseStudy {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		//initialise User array with user objects 
+
+		// initialise User array with user objects
 		ArrayList<User> userList = new ArrayList<User>();
-		
-		User u1 =  new User("admin","admin@gmail.com","admin1","admin");
+
+		User u1 = new User("admin", "admin@gmail.com", "admin1", "admin");
 		userList.add(u1);
-		
+
 		Scanner scanner = new Scanner(System.in);
 		int choice = 0;
 		while (choice != 4) {
@@ -42,7 +42,9 @@ public class C206_CaseStudy {
 			}
 		}
 	}
-	//================================= Option 1 Login Admin =================================
+
+	// ================================= Option 1 Login Admin
+	// =================================
 	private static void LoginAdmin(ArrayList<User> userList) {
 		Scanner scanner = new Scanner(System.in);
 
@@ -62,13 +64,17 @@ public class C206_CaseStudy {
 			}
 		}
 	}
-	//================================= Option 2 Login Teacher =================================
+
+	// ================================= Option 2 Login Teacher
+	// =================================
 	private static void LoginTeacher(ArrayList<User> userList) {
-		//enter code here
+		// enter code here
 	}
-	//================================= Option 3 Login Student =================================
+
+	// ================================= Option 3 Login Student
+	// =================================
 	private static void LoginStudent(ArrayList<User> userList) {
-		//enter code here
+		// enter code here
 	}
 
 	private static void adminMenu() {
@@ -109,7 +115,9 @@ public class C206_CaseStudy {
 			}
 		}
 	}
-	//================================= Option 1 Manage User (Admin) =================================
+
+	// ================================= Option 1 Manage User (Admin)
+	// =================================
 	public static void manageUserAcc() { // tebbie
 		System.out.println();
 		Helper.line(45, "*");
@@ -130,13 +138,13 @@ public class C206_CaseStudy {
 
 			switch (choice) {
 			case 1:
-				addUser(userList); 
+				addUser(userList);
 				break;
 			case 2:
 				viewAllUser(userList);
 				break;
 			case 3:
-				deleteUser(userList); 
+				deleteUser(userList);
 				break;
 			default:
 				System.out.println("Logging out the system..");
@@ -144,6 +152,7 @@ public class C206_CaseStudy {
 			}
 		}
 	}
+
 	public static void addUser(ArrayList<User> userList) {
 		System.out.println("==== Add User ====");
 		String entUsername = Helper.readString("Enter username > ");
@@ -151,22 +160,82 @@ public class C206_CaseStudy {
 		String entEmail = Helper.readString("Enter Email > ");
 		String entRole = Helper.readString("Enter user role > ");
 	}
+
 	public static void viewAllUser(ArrayList<User> userList) {
-		//ent code
+		// enter code
 	}
+
 	public static void deleteUser(ArrayList<User> userList) {
-		//enter code
+		// enter code
 	}
-	//================================= Option 2 Manage UserRoles (Admin) =================================
+
+	// ================================= Option 2 Manage UserRoles (Admin)
+	// =================================
 	public static void manageUserRoles() { // any1
-		//enter code here
+		// enter code here
 	}
-	//================================= Option 3 Manage Activites (Admin) =================================
+
+	// ================================= Option 3 Manage Activites (Admin)
+	// =================================
 	public static void manageActivities() { // xinying
-		//enter code here
+		// enter code here
 	}
-	//================================= Option 4 Manage Registration (Admin) =================================
+
+	// ================================= Option 4 Manage Registration (Admin)
+	// =================================
 	public static void manageRegistration() { // Rach
 		//enter code here
+		
+		//if choice entered is "1"
+		//if entered username and password is correct
+		
+		//first display
+		public static void manageRegistration() {
+			System.out.println();
+			Helper.line(45, "*");
+			System.out.println("*****     MANAGE REGISTRATION     *****");
+		    Helper.line(45, "*");
+		    ArrayList<registration> registration;
+			Object ArrayList = registration>=new ArrayList<registration>();
+		    Scanner scanner = new Scanner(System.in);
+		    int choice=0;
+		    while (choice !=5) {
+		    	System.out.println("1. Add a new registration");
+		    	System.out.println("2. View all registrawtions");
+		    	System.out.println("3. Delete an existing registration");
+		    	System.out.println("4. Exit");
+		    	
+		    	System.out.println("Enter your choice: ");
+		    	
+				if (choice==1) { 
+					//add registration
+				
+					
+				}else if (choice==2){
+					//view all registration
+					//display
+					  Helper.line(32, "*");
+					  System.out.println("***** VIEW REGISTRATION LIST *****");
+					  Helper.line(32, "*");
+					  String title=String.format("\n%-10s %-15s %-10s","Name","Class","Email");
+					  
+					  //for loop to view
+					  for (int i=0;i<registrationList.size();i++) {
+							String name=registrationList.get(i).getName();
+							String class=registrationList.get(i).getClass();
+							String email=registrationList.get(i).getEmail();
+							title+=String.format("%-10s %-15s %-10s\n",name,class,email);}
+						
+						System.out.println(title);
+						}else if (choice==3) {
+							//delete registration
+							
+						}
+		    	
+		    }
+		    
+		}
+		
+		
 	}
 } // end line (admin)
